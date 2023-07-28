@@ -29,7 +29,7 @@ const questions = [
     {
         type: 'input',
         message: 'Enter information about how to contribute:',
-        name: 'contribution'
+        name: 'contributing'
     },
     {
         type: 'input',
@@ -40,12 +40,17 @@ const questions = [
         type: 'list',
         message: 'Please choose a license for your project:',
         choices: ['MIT', 'LGPL-v3.0', 'MPL-2.0', 'AGPL-3.0', 'Unlicense', 'Apache-2.0', 'GPL-3.0'],
-        name: 'choice'
+        name: 'license'
     },
     {
         type: 'input',
         message: 'What is your GitHub username?',
         name: 'github'
+    },
+    {
+        type: 'input',
+        message: 'Please enter your email address',
+        name: 'email'
     }
 ];
 
