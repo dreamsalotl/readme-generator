@@ -34,11 +34,11 @@ There are currently no tests for this application.
 
 ## License
 
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This project is licensed under the Unlicense license.
+This project is licensed under the MIT license.
 
-http://unlicense.org/
+https://opensource.org/licenses/MIT
 
 ## Questions
 
