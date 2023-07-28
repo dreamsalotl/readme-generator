@@ -1,3 +1,5 @@
+// Function to render license badge based on user selection in questions array
+
 function renderLicenseBadge(license) {
   if (license === "MIT") {
     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
@@ -24,6 +26,8 @@ function renderLicenseBadge(license) {
     return ""
   }
 }
+
+// Function to render license link based on user selection in questions array
 
 function renderLicenseLink(license) {
   if (license === "MIT") {
@@ -52,6 +56,8 @@ function renderLicenseLink(license) {
   }
 }
 
+// Function to render license section based on user selection in questions array
+
 function renderLicenseSection(license) {
     if (license === "MIT") {
       return `This project is licensed under the MIT license.`
@@ -78,6 +84,8 @@ function renderLicenseSection(license) {
       return ""
     }
 }
+
+// Function to generate markdown for README 
 
 function generateMarkdown(data) {
   renderLicenseBadge(data.license)
@@ -135,6 +143,8 @@ If you have any questions, feel free to contact me by email, or directly at my G
 [GitHub Page](https://www.github.com/${data.github})
 `;
 }
+
+// Export function to generate markdown for README
 
 module.exports = generateMarkdown;
 

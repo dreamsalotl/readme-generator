@@ -4,6 +4,7 @@ const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown.js')
 const outputCyanText = (text) => console.log(`\x1b[36m${text}\x1b[0m`);
 
+// Array of questions for user input
 
 const questions = [
     {
@@ -54,6 +55,8 @@ const questions = [
     }
 ];
 
+// Function to write README file
+
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data,  err => {
         err ? console.error(err) : outputCyanText("README.md Generated.");
@@ -61,6 +64,8 @@ function writeToFile(fileName, data) {
 }
 
 const fileWrite = util.promisify(writeToFile);
+
+// Function to initialize app
 
 async function init() {
     const inputData = await inquirer.prompt(questions);
@@ -70,5 +75,7 @@ async function init() {
 
     await fileWrite('~README.md', markdown);
 }
+
+// Function call to initialize app
 
 init();
