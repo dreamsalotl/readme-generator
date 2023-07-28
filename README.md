@@ -24,6 +24,8 @@ To install this application, clone the repository to your local machine, and the
 
 To use this application, run `node index.js` in the command line. You will be prompted with a series of questions about your project. Answer the questions, and then a README.md file will be generated in the Develop folder. You can then copy and paste the file into your project's repository.
 
+https://github.com/dreamsalotl/readme-generator/assets/130865355/115cd469-5e23-4805-bc83-f876eeac51f3
+
 ## Contributing
 
 If you would like to contribute to this project, please contact me by email or through my GitHub page. You can find my contact information in the [Questions](#questions) section.
