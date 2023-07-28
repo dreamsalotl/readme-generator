@@ -1,10 +1,10 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const utils = require('./utils');
+const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown.js')
+const outputCyanText = (text) => console.log(`\x1b[36m${text}\x1b[0m`);
 
 
-inquirer
 const questions = [
     {
         type: 'input',
@@ -37,7 +37,7 @@ const questions = [
         name: 'tests'
     },
     {
-        type: 'choices',
+        type: 'list',
         message: 'Please choose a license for your project:',
         choices: ['MIT', 'LGPL-v3.0', 'MPL-2.0', 'AGPL-3.0', 'Unlicense', 'Apache-2.0', 'GPL-3.0'],
         name: 'choice'
@@ -49,14 +49,13 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data,  err => {
-        err ? error.log(err) : console.log("README.md Generated.");
+        err ? console.error(err) : outputCyanText("README.md Generated.");
     } )
 }
 
-const fileWrite = utils.promisify(writeToFile);
+const fileWrite = util.promisify(writeToFile);
 
 async function init() {
     const inputData = await inquirer.prompt(questions);
